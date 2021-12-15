@@ -1,0 +1,7 @@
+VAR
+	Belt_0 : Belt;
+	BeltCyclic_0 : BeltCyclic;
+	ExComponentInfo_0 : ExComponentInfo;
+	ExDatamodelInfo_0 : ExDatamodelInfo;
+	lastPosition : DINT;
+END_VAR

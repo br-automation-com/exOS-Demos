@@ -1,0 +1,10 @@
+
+VAR_CONFIG
+	::RemoteIO_0:RemoteDI_Switch.Input AT %IX."4SIM.10-01".DigitalInput01;
+	::RemoteIO_0:RemoteDO_Switch.Output AT %QX."4SIM.10-01".DigitalOutput01;
+	::RemoteIO_0:RemoteDI_Button.Input AT %IX."4SIM.10-01".DigitalInput03;
+	::RemoteIO_0:RemoteDO_Button.Output AT %QX."4SIM.10-01".DigitalOutput05;
+	::RemoteIO_0:RemoteAI_Pot.Input AT %IW."4SIM.10-01".AnalogInput01;
+	::RemoteIO_0:RemoteDI_Extra.Input AT %IX."4SIM.10-01".DigitalInput04;
+	::RemoteIO_0:RemoteDO_Extra.Output AT %QX."4SIM.10-01".DigitalOutput07;
+END_VAR

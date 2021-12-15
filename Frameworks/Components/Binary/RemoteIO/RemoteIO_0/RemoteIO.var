@@ -1,0 +1,15 @@
+VAR
+	RemoteIOInit_0 : RemoteIOInit;
+	RemoteIOCyclic_0 : RemoteIOCyclic;
+	RemoteIOExit_0 : RemoteIOExit;
+	ExComponentInfo_0 : ExComponentInfo;
+	ExDatamodelInfo_0 : ExDatamodelInfo;
+	RemoteDI_Switch : RemoteDI;
+	RemoteDO_Switch : RemoteDO;
+	RemoteDI_Button : RemoteDI;
+	RemoteDO_Button : RemoteDO;
+	RemoteAI_Pot : RemoteAI;
+	RemoteDI_Extra : RemoteDI;
+	RemoteDO_Extra : RemoteDO;
+	Extra : BOOL;
+END_VAR

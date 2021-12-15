@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentPackage Version="2.0.0" ErrorHandling="Component" StartupTimeout="0">
+    <File FileName="Linux\exos-comp-remoteio_1.0.0_amd64.deb" ChangeEvent="Reinstall"/>
+    <File FileName="Linux\remoteio.js" ChangeEvent="Restart"/>
+    <Service Type="Install" Command="dpkg -i exos-comp-remoteio_1.0.0_amd64.deb"/>
+    <Service Type="Remove" Command="dpkg --purge exos-comp-remoteio"/>
+    <Service Type="Startup" Command="cp remoteio.js /home/user/remoteio"/>
+    <Service Type="Runtime" Command="node remoteio.js" WorkingDirectory="/home/user/remoteio"/>
+    <DatamodelInstance Name="RemoteIO_0"/>
+</ComponentPackage>

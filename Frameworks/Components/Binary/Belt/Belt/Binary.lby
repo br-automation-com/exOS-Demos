@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.10"?>
+<Library SubType="Binary" xmlns="http://br-automation.co.at/AS/Library" Description="Belt exOS library">
+  <Files>
+    <File Description="">Belt.typ</File>
+    <File Description="">Belt.fun</File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="ExData" />
+  </Dependencies>
+</Library>

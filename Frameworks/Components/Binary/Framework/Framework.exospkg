@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentPackage Version="2.0.0" ErrorHandling="Component" StartupTimeout="0">
+    <File FileName="Linux\exos-comp-framework_1.0.0_amd64.deb" ChangeEvent="Reinstall"/>
+    <Service Type="Install" Command="apt install nodejs"/>
+    <Service Type="Install" Command="dpkg -i exos-comp-framework_1.0.0_amd64.deb"/>
+    <Service Type="Remove" Command="dpkg --purge exos-comp-framework"/>
+    <Service Type="Runtime" Command="node framework.js" WorkingDirectory="/home/user/framework"/>
+</ComponentPackage>

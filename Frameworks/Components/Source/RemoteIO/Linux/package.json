@@ -1,0 +1,14 @@
+{
+  "name": "remoteio",
+  "version": "1.0.0",
+  "description": "implementation of exOS data exchange defined by datatype RemoteIO",
+  "main": "remoteio.js",
+  "scripts": {
+    "start": "node remoteio.js"
+  },
+  "author": "your name",
+  "license": "MIT",
+  "dependencies": {
+    "node-ipc": "^10.1.0"
+  }
+}

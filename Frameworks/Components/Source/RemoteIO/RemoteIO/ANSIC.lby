@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.10"?>
+<Library SubType="ANSIC" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File Description="RemoteIO datamodel declaration">RemoteIO.typ</File>
+    <File Description="Generated datamodel header for RemoteIO">exos_remoteio.h</File>
+    <File Description="Generated datamodel source for RemoteIO">exos_remoteio.c</File>
+    <File Description="RemoteIO function blocks">RemoteIO.fun</File>
+    <File Description="RemoteIO library source">remoteio.c</File>
+    <File Description="Dynamic heap configuration">heapsize.cpp</File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="ExData" />
+  </Dependencies>
+</Library>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentPackage Version="2.0.0" ErrorHandling="Component" StartupTimeout="0">
+    <File FileName="Linux\exos-comp-belt_1.0.0_amd64.deb" ChangeEvent="Reinstall"/>
+    <File FileName="Linux\belt.js" ChangeEvent="Restart"/>
+    <Service Type="Install" Command="dpkg -i exos-comp-belt_1.0.0_amd64.deb"/>
+    <Service Type="Remove" Command="dpkg --purge exos-comp-belt"/>
+    <Service Type="Startup" Command="cp belt.js /home/user/belt"/>
+    <Service Type="Runtime" Command="node belt.js" WorkingDirectory="/home/user/belt"/>
+    <DatamodelInstance Name="Belt_0"/>
+</ComponentPackage>

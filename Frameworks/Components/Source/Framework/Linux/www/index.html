@@ -1,0 +1,180 @@
+<html>
+    
+<head>
+    <link rel="stylesheet" href="/w3.css">
+    <script src="/plotly-latest.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <div id="main" class="w3-container">
+
+        <div id="logo" class="w3-margin">
+            <img src="Framework.png"/>
+        </div>
+
+    </div>
+
+</body>
+
+    <script>
+
+    document.body.onload = function () {
+
+        var source = new EventSource("/inputStream");
+        source.onmessage = function (event) {
+            try {
+                let data = JSON.parse(event.data);
+
+                if(data.reload) {
+                    location.reload();
+                }
+
+                let main = document.getElementById("main");
+
+                if(data.plugin && data.plugin.name) {
+                    let div = document.createElement("div");
+                    div.classList.add("w3-bar")
+                    div.classList.add("w3-orange")
+                    div.id = data.plugin.name;
+                    let divname = document.createElement("div");
+                    divname.classList.add("w3-bar-item")
+                    divname.classList.add("w3-text-white")
+                    divname.classList.add("w3-xlarge")
+                    divname.innerText = data.plugin.name;
+                    div.appendChild(divname);
+                    main.appendChild(div);
+
+                    if(data.plugin.digital && Array.isArray(data.plugin.digital)) {
+                        for(let digital of data.plugin.digital) {
+                            if(digital.name) {
+                                let digitalDiv = document.createElement("div");
+                                digitalDiv.classList.add("w3-container");
+                                digitalDiv.classList.add("w3-margin");
+
+                                let label = document.createElement("label");
+                                label.innerText = digital.name;
+
+                                let checkbox = document.createElement("input");
+                                checkbox.classList.add("w3-check");
+                                checkbox.type = "checkbox";
+                                checkbox.id = digital.name;
+                                checkbox.checked = digital.value;
+                                checkbox.disabled = true;
+
+                                let br = document.createElement("br");
+
+                                digitalDiv.appendChild(label);
+                                digitalDiv.appendChild(br);
+                                digitalDiv.appendChild(checkbox);
+
+                                main.appendChild(digitalDiv);
+                            }
+                        }
+                    }
+
+                    if(data.plugin.numeric && Array.isArray(data.plugin.numeric)) {
+                        for(let numeric of data.plugin.numeric) {
+                            if(numeric.name) {
+                                let numericDiv = document.createElement("div");
+                                numericDiv.classList.add("w3-container");
+                                numericDiv.classList.add("w3-margin");
+
+                                let label = document.createElement("label");
+                                label.innerText = numeric.name;
+                                label.classList.add("w3-margin-top");
+                                
+                                let input = document.createElement("input");
+                                input.classList.add("w3-input");
+                                input.classList.add("w3-border");
+                                input.classList.add("w3-round");
+                                input.readOnly = true;
+                                input.type = "text";
+                                input.id = numeric.name;
+                                input.value = numeric.value.toString();
+
+                                numericDiv.appendChild(label);
+                                numericDiv.appendChild(input);
+                                main.appendChild(numericDiv);
+
+                            }
+                        }
+                    }
+
+                    if(data.plugin.plot  && Array.isArray(data.plugin.plot)) {
+                        for(let plot of data.plugin.plot) {
+                            if(plot.name) {
+                                let plotDiv = document.createElement("div");
+                                plotDiv.classList.add("w3-container");
+                                plotDiv.classList.add("w3-margin");
+
+                                let graph = document.createElement("div");
+                                graph.id = plot.name;
+
+                                plotDiv.appendChild(graph);
+                                main.appendChild(plotDiv);
+
+                                if(plot.data && Array.isArray(plot.data)) {
+                                    if(plot.layout) {
+                                        Plotly.newPlot(plot.name, plot.data, plot.layout);
+                                    }
+                                    else
+                                    {
+                                        Plotly.newPlot(plot.name, plot.data);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                if(data.update) {
+                    if(data.update.digital && Array.isArray(data.update.digital)) {
+                        for(let digital of data.update.digital) {
+                            if(digital.name) {
+                                let checkbox = document.getElementById(digital.name);
+                                checkbox.checked = digital.value;
+                            }
+                        }
+                    }
+                    if(data.update.numeric && Array.isArray(data.update.numeric)) {
+                        for(let numeric of data.update.numeric) {
+                            if(numeric.name) {
+                                let input = document.getElementById(numeric.name);
+                                input.value = numeric.value.toString();   
+                            }
+                        }
+                    }
+                    if(data.update.plot  && Array.isArray(data.update.plot)) {
+                        for(let plot of data.update.plot) {
+                            if(plot.name) {
+                                if(plot.data && Array.isArray(plot.data)) {
+                                    if(plot.layout) {
+                                        Plotly.react(plot.name, plot.data, plot.layout);
+                                    }
+                                    else
+                                    {
+                                        Plotly.react(plot.name, plot.data);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                console.log(data);
+
+            }
+            catch (err) {
+
+            }
+        };
+
+        
+    }
+
+    </script>
+
+</html>

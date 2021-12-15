@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package SubType="exosPackage" PackageType="exosPackage" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File"  Description="exOS package description">Belt.exospkg</Object>
+    <Object Type="Program" Language="IEC" Description="Belt application">Belt_0</Object>
+    <Object Type="Library" Language="ANSIC" Description="Belt exOS library">Belt</Object>
+    <Object Type="Package"  Description="Belt Linux resources">Linux</Object>
+  </Objects>
+</Package>

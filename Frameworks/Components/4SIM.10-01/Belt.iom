@@ -1,10 +1,10 @@
 VAR_CONFIG
 	::Belt_0:Belt_0.IO.iRun AT %IX."4SIM.10-01".DigitalInput02;
-	::Belt_0:Belt_0.IO.iLatch AT %IX."4SIM.10-01".DigitalInput06;
 	::Belt_0:Belt_0.Status.Running AT %QX."4SIM.10-01".DigitalOutput02;
-	::Belt_0:Belt_0.Status.Latched AT %QX."4SIM.10-01".DigitalOutput14;
 	::Belt_0:Belt_0.IO.oActuator AT %QX."4SIM.10-01".DigitalOutput09;
 	::Belt_0:Belt_0.IO.iSpeed AT %IW."4SIM.10-01".AnalogInput02;
 	::Belt_0:Belt_0.IO.oActPos AT %QW."4SIM.10-01".AnalogOutput01;
-	::Belt_0:Belt_0.IO.oLatchActive AT %QX."4SIM.10-01".DigitalOutput13;
+	::Belt_0:Belt_0.IO.iLatch AT %IX."4SIM.10-01".DigitalInput05;
+	::Belt_0:Belt_0.IO.oLatchActive AT %QX."4SIM.10-01".DigitalOutput10;
+	::Belt_0:Belt_0.Status.Latched AT %QX."4SIM.10-01".DigitalOutput11;
 END_VAR

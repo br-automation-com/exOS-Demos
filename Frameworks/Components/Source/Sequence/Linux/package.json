@@ -1,0 +1,14 @@
+{
+  "name": "sequence",
+  "version": "1.0.0",
+  "description": "implementation of exOS data exchange defined by datatype Sequence",
+  "main": "sequence.js",
+  "scripts": {
+    "start": "node sequence.js"
+  },
+  "author": "your name",
+  "license": "MIT",
+  "dependencies": {
+    "node-ipc": "^10.1.0"
+  }
+}

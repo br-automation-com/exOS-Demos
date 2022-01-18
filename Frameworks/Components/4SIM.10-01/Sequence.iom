@@ -1,0 +1,9 @@
+
+VAR_CONFIG
+	::Sequence_0:ButtonLeft AT %IX."4SIM.10-01".DigitalInput03;
+	::Sequence_0:ButtonRight AT %IX."4SIM.10-01".DigitalInput06;
+	::Sequence_0:Sequence_0.Buttons.ButtonLeft AT %QX."4SIM.10-01".DigitalOutput04;
+	::Sequence_0:Sequence_0.Buttons.ButtonRight AT %QX."4SIM.10-01".DigitalOutput13;
+	::Sequence_0:Sequence_0.Active AT %QX."4SIM.10-01".DigitalOutput03;
+	::Sequence_0:Sequence_0.Active AT %QX."4SIM.10-01".DigitalOutput12;
+END_VAR

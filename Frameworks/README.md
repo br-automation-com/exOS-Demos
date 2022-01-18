@@ -7,6 +7,7 @@ are deployed with exOS are connecting to the "framework" via this node-ipc.
 
 ![][img_layout]
 
-In the Components folder Binary and Source components are found, together with sample I/O-mapping files for the Belt and RemoteIO demos.
+In the Components folder, Binary and Source components are found together 
+with sample I/O-mapping files for the Belt, RemoteIO and Sequence demos.
 
 [img_layout]: images/Framework.png

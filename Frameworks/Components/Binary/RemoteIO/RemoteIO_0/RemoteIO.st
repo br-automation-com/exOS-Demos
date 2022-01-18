@@ -22,12 +22,12 @@ PROGRAM _CYCLIC
 	RemoteDI_Switch(Handle := RemoteIOInit_0.Handle, Name := 'Switch D1');
 	RemoteDO_Switch(Handle := RemoteIOInit_0.Handle, Name := 'Switch D1');
 
-	RemoteDI_Button(Handle := RemoteIOInit_0.Handle, Name := 'Button DI3');
-	RemoteDO_Button(Handle := RemoteIOInit_0.Handle, Name := 'Button DI3');
+	RemoteDI_Button(Handle := RemoteIOInit_0.Handle, Name := 'Button DI4');
+	RemoteDO_Button(Handle := RemoteIOInit_0.Handle, Name := 'Button DI4');
 
 	IF (Extra) THEN
-		RemoteDI_Extra(Handle := RemoteIOInit_0.Handle, Name := 'Extra D4');
-		RemoteDO_Extra(Handle := RemoteIOInit_0.Handle, Name := 'Extra D4');
+		RemoteDI_Extra(Handle := RemoteIOInit_0.Handle, Name := 'Encoder Key');
+		RemoteDO_Extra(Handle := RemoteIOInit_0.Handle, Name := 'Encoder Key');
 	END_IF
 	
 	RemoteAI_Pot(Handle := RemoteIOInit_0.Handle, Name := 'Potentiometer P1');

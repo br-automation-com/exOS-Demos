@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.10"?>
+<Library SubType="ANSIC" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File Description="Sequence datamodel declaration">Sequence.typ</File>
+    <File Description="Generated datamodel header for Sequence">exos_sequence.h</File>
+    <File Description="Generated datamodel source for Sequence">exos_sequence.c</File>
+    <File Description="Sequence function blocks">Sequence.fun</File>
+    <File Description="Sequence library source">sequence.c</File>
+    <File Description="Dynamic heap configuration">heapsize.cpp</File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="ExData" />
+  </Dependencies>
+</Library>

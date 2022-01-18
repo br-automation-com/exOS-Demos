@@ -1,0 +1,4 @@
+build/
+*.bak
+*.ori
+exos-comp-*.deb

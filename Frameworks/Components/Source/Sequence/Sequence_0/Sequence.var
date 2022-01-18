@@ -1,0 +1,12 @@
+VAR
+	SequenceInit_0 : SequenceInit;
+	SequenceCyclic_0 : SequenceCyclic;
+	SequenceExit_0 : SequenceExit;
+	Sequence_0 : Sequence;
+	ExComponentInfo_0 : ExComponentInfo;
+	RemoteRun : BOOL;
+	TON_0 : TON;
+	ButtonLeft : BOOL;
+	ButtonRight : BOOL;
+	StartOK : BOOL;
+END_VAR

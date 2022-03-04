@@ -1,0 +1,162 @@
+[
+    {
+        "id": "98dff690d519cc38",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "17f8db17a36c1b08",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "228f95616c7ea185",
+        "type": "debug",
+        "z": "98dff690d519cc38",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "3c5953556c4d0ce4",
+        "type": "mqtt in",
+        "z": "98dff690d519cc38",
+        "name": "",
+        "topic": "simpanel/current",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "17f8db17a36c1b08",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 380,
+        "wires": [
+            [
+                "228f95616c7ea185",
+                "b672b52b969a5164"
+            ]
+        ]
+    },
+    {
+        "id": "60336792b3f64edb",
+        "type": "mqtt out",
+        "z": "98dff690d519cc38",
+        "name": "",
+        "topic": "simpanel/updated",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "17f8db17a36c1b08",
+        "x": 930,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "b672b52b969a5164",
+        "type": "json",
+        "z": "98dff690d519cc38",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 390,
+        "y": 380,
+        "wires": [
+            [
+                "aa76aa52ce055ff9"
+            ]
+        ]
+    },
+    {
+        "id": "a851c8a582e7f33d",
+        "type": "json",
+        "z": "98dff690d519cc38",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 730,
+        "y": 380,
+        "wires": [
+            [
+                "60336792b3f64edb"
+            ]
+        ]
+    },
+    {
+        "id": "f70883a8986acc16",
+        "type": "debug",
+        "z": "98dff690d519cc38",
+        "name": "",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload.Display",
+        "targetType": "msg",
+        "statusVal": "payload.Display",
+        "statusType": "msg",
+        "x": 820,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "aa76aa52ce055ff9",
+        "type": "function",
+        "z": "98dff690d519cc38",
+        "name": "",
+        "func": "msg.payload.Display = (msg.payload.Encoder % 1000) + ((msg.payload.Encoder < 0)? 1000: 0)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 380,
+        "wires": [
+            [
+                "a851c8a582e7f33d",
+                "f70883a8986acc16"
+            ]
+        ]
+    }
+]

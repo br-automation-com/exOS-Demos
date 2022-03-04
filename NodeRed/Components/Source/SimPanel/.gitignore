@@ -1,0 +1,5 @@
+build/
+node_modules/
+*.bak
+*.ori
+exos-comp-*.deb

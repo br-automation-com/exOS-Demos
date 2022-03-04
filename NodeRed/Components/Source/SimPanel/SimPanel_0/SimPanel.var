@@ -1,0 +1,8 @@
+VAR
+    SimPanelInit_0 : SimPanelInit;
+    SimPanelCyclic_0 : SimPanelCyclic;
+    SimPanelExit_0 : SimPanelExit;
+    SimPanel_0 : SimPanel;
+    ExComponentInfo_0 : ExComponentInfo;
+    ExDatamodelInfo_0 : ExDatamodelInfo;
+END_VAR

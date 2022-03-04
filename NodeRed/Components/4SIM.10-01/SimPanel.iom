@@ -1,0 +1,27 @@
+VAR_CONFIG
+	::SimPanel_0:SimPanel_0.Switches.DI1 AT %IX."4SIM.10-01".DigitalInput01;
+	::SimPanel_0:SimPanel_0.Switches.DI2 AT %IX."4SIM.10-01".DigitalInput02;
+	::SimPanel_0:SimPanel_0.LEDs.DI1 AT %QX."4SIM.10-01".DigitalOutput01;
+	::SimPanel_0:SimPanel_0.LEDs.DI2 AT %QX."4SIM.10-01".DigitalOutput02;
+	::SimPanel_0:SimPanel_0.Display AT %QW."4SIM.10-01".AnalogOutput01;
+	::SimPanel_0:SimPanel_0.Encoder AT %IW."4SIM.10-01".Encoder01;
+	::SimPanel_0:SimPanel_0.Buttons.DI3 AT %IX."4SIM.10-01".DigitalInput03;
+	::SimPanel_0:SimPanel_0.Buttons.DI4 AT %IX."4SIM.10-01".DigitalInput04;
+	::SimPanel_0:SimPanel_0.Buttons.DI5 AT %IX."4SIM.10-01".DigitalInput05;
+	::SimPanel_0:SimPanel_0.Buttons.DI6 AT %IX."4SIM.10-01".DigitalInput06;
+	::SimPanel_0:SimPanel_0.Buttons.Encoder AT %IX."4SIM.10-01".DigitalInput07;
+	::SimPanel_0:SimPanel_0.Knobs.P1 AT %IW."4SIM.10-01".AnalogInput01;
+	::SimPanel_0:SimPanel_0.Knobs.P2 AT %IW."4SIM.10-01".AnalogInput02;
+	::SimPanel_0:SimPanel_0.LEDs.DI3.Red AT %QX."4SIM.10-01".DigitalOutput03;
+	::SimPanel_0:SimPanel_0.LEDs.DI3.Yellow AT %QX."4SIM.10-01".DigitalOutput04;
+	::SimPanel_0:SimPanel_0.LEDs.DI3.Green AT %QX."4SIM.10-01".DigitalOutput05;
+	::SimPanel_0:SimPanel_0.LEDs.DI4.Red AT %QX."4SIM.10-01".DigitalOutput06;
+	::SimPanel_0:SimPanel_0.LEDs.DI4.Yellow AT %QX."4SIM.10-01".DigitalOutput07;
+	::SimPanel_0:SimPanel_0.LEDs.DI4.Green AT %QX."4SIM.10-01".DigitalOutput08;
+	::SimPanel_0:SimPanel_0.LEDs.DI5.Red AT %QX."4SIM.10-01".DigitalOutput09;
+	::SimPanel_0:SimPanel_0.LEDs.DI5.Yellow AT %QX."4SIM.10-01".DigitalOutput10;
+	::SimPanel_0:SimPanel_0.LEDs.DI5.Green AT %QX."4SIM.10-01".DigitalOutput11;
+	::SimPanel_0:SimPanel_0.LEDs.DI6.Red AT %QX."4SIM.10-01".DigitalOutput12;
+	::SimPanel_0:SimPanel_0.LEDs.DI6.Yellow AT %QX."4SIM.10-01".DigitalOutput13;
+	::SimPanel_0:SimPanel_0.LEDs.DI6.Green AT %QX."4SIM.10-01".DigitalOutput14;
+END_VAR

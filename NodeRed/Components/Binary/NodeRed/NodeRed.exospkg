@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ComponentPackage Version="2.0.0" ErrorHandling="Component" StartupTimeout="0">
+    <File FileName="Linux\exos-comp-nodered_1.0.0_amd64.deb" ChangeEvent="Reinstall"/>
+    <File FileName="Linux\settings.js" ChangeEvent="Ignore"/>
+	<Service Type="Install" Command="dpkg -i exos-comp-nodered_1.0.0_amd64.deb"/>
+    <Service Type="Remove" Command="dpkg --purge exos-comp-nodered"/>
+	<Service Type="Runtime" Command="npx node-red -s settings.js" WorkingDirectory="/home/user/nodered"/>
+	<ComponentGenerator Class="ExosComponentNAPI" Version="2.0.0">
+        <Option Name="exportLinux" Value="exos-comp-nodered_1.0.0_amd64.deb,settings.js"/>
+	</ComponentGenerator>
+</ComponentPackage>

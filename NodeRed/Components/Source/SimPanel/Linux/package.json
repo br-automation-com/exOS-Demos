@@ -1,0 +1,14 @@
+{
+  "name": "simpanel",
+  "version": "1.0.0",
+  "description": "implementation of exOS data exchange defined by datatype SimPanel",
+  "main": "simpanel.js",
+  "scripts": {
+    "start": "node simpanel.js"
+  },
+  "author": "your name",
+  "license": "MIT",
+  "dependencies": {
+    "mqtt": "^4.3.6"
+  }
+}

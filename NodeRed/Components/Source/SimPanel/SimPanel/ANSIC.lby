@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.10"?>
+<Library SubType="ANSIC" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File Description="SimPanel datamodel declaration">SimPanel.typ</File>
+    <File Description="Generated datamodel header for SimPanel">exos_simpanel.h</File>
+    <File Description="Generated datamodel source for SimPanel">exos_simpanel.c</File>
+    <File Description="SimPanel function blocks">SimPanel.fun</File>
+    <File Description="SimPanel library source">simpanel.c</File>
+    <File Description="Dynamic heap configuration">heapsize.cpp</File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="ExData" />
+  </Dependencies>
+</Library>

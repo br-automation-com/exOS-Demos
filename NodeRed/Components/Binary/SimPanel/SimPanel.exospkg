@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentPackage Version="2.0.0" ErrorHandling="Component" StartupTimeout="0">
+    <File FileName="Linux\exos-comp-simpanel_1.0.0_amd64.deb" ChangeEvent="Reinstall"/>
+    <File FileName="Linux\simpanel.js" ChangeEvent="Restart"/>
+    <File FileName="Linux\client.js" ChangeEvent="Restart"/>
+    <Service Type="Install" Command="dpkg -i exos-comp-simpanel_1.0.0_amd64.deb"/>
+    <Service Type="Remove" Command="dpkg --purge exos-comp-simpanel"/>
+    <Service Type="Startup" Command="cp simpanel.js /home/user/simpanel"/>
+    <Service Type="Startup" Command="cp client.js /home/user/simpanel"/>
+    <Service Type="Runtime" Command="node client.js" WorkingDirectory="/home/user/simpanel"/>
+    <DatamodelInstance Name="SimPanel_0"/>
+</ComponentPackage>
